@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>AZK_1 Store – Hosting Minecraft, AFK Roblox, Edit Foto</title>
+<meta name="description" content="AZK_1 Store melayani hosting server Minecraft Java dan Bedrock, AFK akun Roblox, dan edit foto atau gambar.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Rubik:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  color-scheme:light;
+  --bg:#f3fbff;--ink:#0b2230;--muted:#3f5c6e;--card:#ffffff;--line:#c9e3f1;
+  --orange:#ff5a14;--teal:#17748f;--sky:#3ab4ff;--navy:#034ca8;
+  --hero-a:#d3ffdc;--hero-b:#a4c4ff;--on-accent:#ffffff;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    color-scheme:dark;
+    --bg:#07141d;--ink:#e8f4fb;--muted:#9db7c6;--card:#0e2230;--line:#1b3a4f;
+    --teal:#4cc0df;--hero-a:#0d3a33;--hero-b:#10285a;
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --bg:#07141d;--ink:#e8f4fb;--muted:#9db7c6;--card:#0e2230;--line:#1b3a4f;
+  --teal:#4cc0df;--hero-a:#0d3a33;--hero-b:#10285a;
+}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Rubik",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;line-height:1.6;font-size:17px;padding-bottom:88px}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--orange);outline-offset:3px}
+.wrap{max-width:720px;margin:0 auto;padding:0 20px}
+
+/* Hero */
+.hero{background:linear-gradient(135deg,var(--hero-a),var(--hero-b));padding:44px 0 96px;clip-path:polygon(0 0,100% 0,100% 100%,0 calc(100% - 56px));}
+.mark{font-family:"Permanent Marker","Rubik",Impact,sans-serif;line-height:.9;margin:0;font-weight:400}
+.mark .a{display:block;color:var(--orange);font-size:clamp(68px,24vw,148px);transform:rotate(-3deg);transform-origin:left bottom;letter-spacing:-.02em}
+.mark .b{display:block;color:var(--teal);font-size:clamp(44px,15vw,96px);margin:-6px 0 0 .6em;transform:rotate(-3deg)}
+.hero p{font-size:clamp(19px,5vw,24px);font-weight:500;max-width:30ch;margin:28px 0 24px}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 24px;border-radius:999px;background:var(--orange);color:var(--on-accent);font-weight:700;text-decoration:none;border:0;font-size:17px}
+.btn:hover{filter:brightness(1.08)}
+.btn.alt{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 2px var(--ink)}
+.row{display:flex;flex-wrap:wrap;gap:12px}
+
+/* Sections */
+section{padding:48px 0 8px}
+h2{font-size:clamp(26px,7vw,34px);line-height:1.15;margin:0 0 8px;font-weight:800}
+.lead{color:var(--muted);margin:0 0 28px;max-width:52ch}
+
+/* Layanan */
+.svc{display:grid;gap:6px;padding:20px 20px 20px 22px;margin-bottom:14px;background:var(--card);border-left:8px solid var(--c,var(--orange));border-radius:4px 18px 18px 4px;box-shadow:0 1px 0 var(--line),0 0 0 1px var(--line) inset}
+.svc:nth-child(1){--c:var(--orange)}
+.svc:nth-child(2){--c:var(--teal)}
+.svc:nth-child(3){--c:var(--sky)}
+.svc:nth-child(4){--c:var(--navy)}
+.svc h3{margin:0;font-size:21px;font-weight:700}
+.svc p{margin:0;color:var(--muted)}
+.svc a.ask{justify-self:start;margin-top:8px;font-weight:700;color:var(--teal);text-decoration:underline;text-underline-offset:4px;min-height:44px;display:inline-flex;align-items:center}
+.note{display:inline-block;margin-top:6px;padding:4px 10px;border-radius:999px;background:var(--bg);box-shadow:0 0 0 1px var(--line) inset;font-size:14px;color:var(--muted)}
+
+/* Cara order */
+ol.steps{list-style:none;margin:0;padding:0;display:grid;gap:16px;counter-reset:s}
+ol.steps li{counter-increment:s;display:grid;grid-template-columns:44px 1fr;gap:14px;align-items:start}
+ol.steps li::before{content:counter(s);width:44px;height:44px;border-radius:50%;display:grid;place-items:center;background:var(--teal);color:#fff;font-weight:800;font-size:19px}
+ol.steps b{display:block}
+ol.steps span{color:var(--muted)}
+[data-theme="dark"] ol.steps li::before{color:#04202b}
+
+/* Kontak */
+.contact{margin-top:48px;background:var(--navy);color:#fff;padding:44px 0 40px;clip-path:polygon(0 40px,100% 0,100% 100%,0 100%)}
+.contact h2{color:#fff;margin-top:28px}
+.contact p{margin:0 0 20px;color:#d4e6ff}
+.contact .btn.alt{color:#fff;box-shadow:inset 0 0 0 2px #fff}
+.contact dl{margin:24px 0 0;display:grid;gap:4px;font-size:16px;color:#d4e6ff}
+.contact dt{font-weight:700;color:#fff}
+.contact dd{margin:0 0 10px}
+footer{padding:20px 0 12px;font-size:14px;color:var(--muted)}
+
+/* Tombol WA mengambang */
+.fab{position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:5;box-shadow:0 6px 20px rgba(0,0,0,.3)}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+@media (min-width:700px){body{font-size:18px}.hero{padding-top:64px}}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <h1 class="mark" aria-label="AZK_1 store"><span class="a">AZK_1</span><span class="b">store</span></h1>
+    <p>Hosting server Minecraft, AFK akun Roblox, dan edit foto. Pesan lewat WhatsApp.</p>
+    <div class="row">
+      <a class="btn" href="https://wa.me/62816268356?text=Halo%20AZK_1%20Store%2C%20saya%20mau%20tanya%20layanan" rel="noopener">Chat WhatsApp</a>
+      <a class="btn alt" href="#layanan">Lihat layanan</a>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section id="layanan">
+    <div class="wrap">
+      <h2>Layanan kami</h2>
+      <p class="lead">Pilih layanan, lalu tanya harga dan ketersediaan langsung ke WhatsApp.</p>
+
+      <article class="svc">
+        <h3>Hosting server Minecraft Java</h3>
+        <p>Server Minecraft Java untuk main bareng teman.</p>
+        <a class="ask" href="https://wa.me/62816268356?text=Halo%20AZK_1%20Store%2C%20saya%20mau%20tanya%20hosting%20Minecraft%20Java" rel="noopener">Tanya harga</a>
+      </article>
+
+      <article class="svc">
+        <h3>Hosting server Minecraft Bedrock</h3>
+        <p>Server Minecraft Bedrock untuk pemain HP, konsol, dan Windows.</p>
+        <a class="ask" href="https://wa.me/62816268356?text=Halo%20AZK_1%20Store%2C%20saya%20mau%20tanya%20hosting%20Minecraft%20Bedrock" rel="noopener">Tanya harga</a>
+      </article>
+
+      <article class="svc">
+        <h3>AFK akun Roblox</h3>
+        <p>Akun kamu tetap online saat kamu tidak bermain.</p>
+        <span class="note">Belum bisa untuk semua game Roblox. Tanya dulu sebelum order.</span>
+        <a class="ask" href="https://wa.me/62816268356?text=Halo%20AZK_1%20Store%2C%20saya%20mau%20tanya%20AFK%20Roblox.%20Game%20saya%3A%20" rel="noopener">Cek game kamu</a>
+      </article>
+
+      <article class="svc">
+        <h3>Edit foto dan gambar</h3>
+        <p>Edit foto, banner, dan desain sederhana. Kirim contoh yang kamu mau.</p>
+        <a class="ask" href="https://wa.me/62816268356?text=Halo%20AZK_1%20Store%2C%20saya%20mau%20tanya%20edit%20foto%2Fgambar" rel="noopener">Tanya harga</a>
+      </article>
+    </div>
+  </section>
+
+  <section id="cara-order">
+    <div class="wrap">
+      <h2>Cara order</h2>
+      <p class="lead">Tiga langkah, semuanya lewat WhatsApp.</p>
+      <ol class="steps">
+        <li><div><b>Pilih layanan</b><span>Kirim pesan ke WhatsApp dan sebutkan layanan yang kamu mau.</span></div></li>
+        <li><div><b>Sepakati detail dan harga</b><span>Kami konfirmasi ketersediaan, harga, dan cara bayar.</span></div></li>
+        <li><div><b>Layanan diproses</b><span>Setelah pembayaran, pesananmu kami kerjakan.</span></div></li>
+      </ol>
+    </div>
+  </section>
+</main>
+
+<section class="contact" id="kontak">
+  <div class="wrap">
+    <h2>Hubungi AZK_1 Store</h2>
+    <p>Balasan paling cepat lewat WhatsApp.</p>
+    <div class="row">
+      <a class="btn" href="https://wa.me/62816268356?text=Halo%20AZK_1%20Store%2C%20saya%20mau%20order" rel="noopener">Chat WhatsApp</a>
+      <a class="btn alt" href="mailto:azk1shop253@gmail.com">Kirim email</a>
+    </div>
+    <dl>
+      <div><dt>WhatsApp</dt><dd>+62 816-268-356</dd></div>
+      <div><dt>Email</dt><dd>azk1shop253@gmail.com</dd></div>
+    </dl>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">© 2026 AZK_1 Store. Minecraft dan Roblox adalah merek dagang pemiliknya masing-masing. Toko ini tidak berafiliasi dengan keduanya.</div>
+</footer>
+
+<a class="btn fab" href="https://wa.me/62816268356?text=Halo%20AZK_1%20Store%2C%20saya%20mau%20tanya%20layanan" rel="noopener" aria-label="Chat WhatsApp AZK_1 Store">Chat WhatsApp</a>
+
+</body>
+</html>
